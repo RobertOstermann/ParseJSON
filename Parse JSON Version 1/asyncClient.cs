@@ -21,7 +21,7 @@ namespace Parse_JSON_Version_1
 
         private async void uxGo_Click(object sender, EventArgs e)
         {
-            FootballPlayerModel allPlayers = await FootballPlayerProcessor.LoadPlayerInformation();
+            FootballPlayerModel allPlayers = await FootballPlayerProcessor.LoadPlayerInformation(uxAsyncURL.Text);
             
             foreach (FootballPlayerModel.allPlayers player in allPlayers.player)
             {

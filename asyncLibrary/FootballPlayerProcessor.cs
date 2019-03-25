@@ -9,9 +9,12 @@ namespace asyncLibrary
 {
     public class FootballPlayerProcessor
     {
-        public static async Task<FootballPlayerModel> LoadPlayerInformation()
+        public static async Task<FootballPlayerModel> LoadPlayerInformation(string url)
         {
-            string url = "http://www54.myfantasyleague.com/2018/export?TYPE=players&DETAILS=&SINCE=&PLAYERS=&JSON=1";
+            if(url == "")
+            {
+                //url = "http://www54.myfantasyleague.com/2018/export?TYPE=players&DETAILS=&SINCE=&PLAYERS=&JSON=1";
+            }
             Console.WriteLine(url);
             using (HttpResponseMessage response = await apiAsyncClient.ApiClient.GetAsync(url))
             {
