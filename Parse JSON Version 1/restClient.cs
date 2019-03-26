@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* restClient.cs
+ * Author: Robert Ostermann
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +16,20 @@ namespace Parse_JSON_Version_1
 {
     public partial class restClient : Form
     {
+        /// <summary>
+        /// Initialize the restClient form.
+        /// </summary>
         public restClient()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Initializes an apiClient.
+        /// Sets the endPoint to the text from uxResURL textbox.
+        /// Writes the response using debugOutput.
+        /// </summary>
+        /// <param name="sender">Go Button</param>
+        /// <param name="e"></param>
         private void uxGo_Click(object sender, EventArgs e)
         {
             apiClient client = new apiClient();
@@ -31,7 +43,10 @@ namespace Parse_JSON_Version_1
 
             debugOutput(response);
         }
-
+        /// <summary>
+        /// Writes text to the uxOutput textbox.
+        /// </summary>
+        /// <param name="debugText">String to write to uxOutput.</param>
         private void debugOutput(string debugText)
         {
             try

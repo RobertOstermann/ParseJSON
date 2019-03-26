@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* asyncClient.cs
+ * Author: Robert Ostermann
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,11 +17,20 @@ namespace Parse_JSON_Version_1
 {
     public partial class asyncClient : Form
     {
+        /// <summary>
+        /// Initialize the asyncClient form.
+        /// </summary>
         public asyncClient()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// This method is async, which means the UI can still run
+        /// while the program is awaiting the response from the FootballPlayerProcessor.
+        /// Utilizes a foreach loop to displays the player names on the uxList.
+        /// </summary>
+        /// <param name="sender">Go Button</param>
+        /// <param name="e"></param>
         private async void uxGo_Click(object sender, EventArgs e)
         {
             FootballPlayerModel allPlayers = await FootballPlayerProcessor.LoadPlayerInformation(uxAsyncURL.Text);
@@ -27,21 +39,6 @@ namespace Parse_JSON_Version_1
             {
                 //debugOutput(player.name.ToString() + " - " + player.id.ToString());
                 uxList.Items.Add(player.name);
-            }
-        }
-
-        private void debugOutput(string debugText)
-        {
-            try
-            {
-                System.Diagnostics.Debug.Write(debugText + Environment.NewLine);
-                uxResponse.Text = uxResponse.Text + debugText + Environment.NewLine;
-                uxResponse.SelectionStart = uxResponse.TextLength;
-                uxResponse.ScrollToCaret();
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.Write(ex.Message, ToString() + Environment.NewLine);
             }
         }
     }
