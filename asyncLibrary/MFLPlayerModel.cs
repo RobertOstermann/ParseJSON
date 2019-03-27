@@ -22,7 +22,7 @@ namespace asyncLibrary
             {
                 public string Name { get; set; }
 
-                public int Id { get; set; }
+                public string Id { get; set; }
 
                 public string Position { get; set; }
 
@@ -48,15 +48,15 @@ namespace asyncLibrary
 
             public class APIRosterFranchiseObject
             {
-                public int Id { get; set; }
+                public string Id { get; set; }
 
                 public List<APIRosterPlayerObject> Player { get; set; }
 
                 public class APIRosterPlayerObject
                 {
-                    public int ContractYear { get; set; }
+                    public string ContractYear { get; set; }
 
-                    public int Id { get; set; }
+                    public string Id { get; set; }
 
                     public string Salary { get; set; }
                 }
@@ -81,9 +81,9 @@ namespace asyncLibrary
                 {
                     public string Name { get; set; }
 
-                    public int Id { get; set; }
+                    public string Id { get; set; }
 
-                    public int Division { get; set; }
+                    public string Division { get; set; }
                 }
             }
         }

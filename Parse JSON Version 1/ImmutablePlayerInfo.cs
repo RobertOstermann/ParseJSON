@@ -9,7 +9,8 @@ namespace Parse_JSON_Version_1
     public struct ImmutablePlayerInfo
     {
         //Name should not be necessary as it is the key.
-        //public string Name { get; }
+        public string Name { get; }
+
         public int Id { get; }
 
         public string Team { get; }
@@ -22,9 +23,9 @@ namespace Parse_JSON_Version_1
 
         public bool Roster { get; }
 
-        public ImmutablePlayerInfo(int id, string team, string mflTeam, decimal salary, char position, bool roster)
+        public ImmutablePlayerInfo(string name, int id, string team, string mflTeam, decimal salary, char position, bool roster)
         {
-            //Name = name;
+            Name = name;
             Id = id;
             Team = team;
             MFLTeam = mflTeam;
@@ -35,7 +36,7 @@ namespace Parse_JSON_Version_1
 
         public override string ToString()
         {
-            return Id.ToString().PadRight(27) + Team;
+            return Name.PadRight(27) + Id.ToString().PadRight(27) + Team;
         }
     }
 }

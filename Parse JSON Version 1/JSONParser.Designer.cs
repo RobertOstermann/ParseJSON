@@ -139,6 +139,7 @@
             this.uxMFLApi.TabIndex = 5;
             this.uxMFLApi.Text = "MFL API";
             this.uxMFLApi.UseVisualStyleBackColor = true;
+            this.uxMFLApi.Click += new System.EventHandler(this.uxMFLApi_Click);
             // 
             // JSONParser
             // 

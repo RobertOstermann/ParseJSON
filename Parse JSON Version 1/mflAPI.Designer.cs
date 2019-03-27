@@ -35,6 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.uxDisplayDictionary = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uxPlayerList
@@ -101,11 +102,22 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "ID";
             // 
+            // uxDisplayDictionary
+            // 
+            this.uxDisplayDictionary.Location = new System.Drawing.Point(12, 442);
+            this.uxDisplayDictionary.Name = "uxDisplayDictionary";
+            this.uxDisplayDictionary.Size = new System.Drawing.Size(776, 38);
+            this.uxDisplayDictionary.TabIndex = 7;
+            this.uxDisplayDictionary.Text = "Display Dictionary";
+            this.uxDisplayDictionary.UseVisualStyleBackColor = true;
+            this.uxDisplayDictionary.Click += new System.EventHandler(this.button1_Click);
+            // 
             // mflAPI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 488);
+            this.Controls.Add(this.uxDisplayDictionary);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -129,5 +141,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button uxDisplayDictionary;
     }
 }

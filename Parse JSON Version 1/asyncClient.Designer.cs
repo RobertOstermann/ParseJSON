@@ -106,7 +106,7 @@
             // 
             // uxSearchAVL
             // 
-            this.uxSearchAVL.Location = new System.Drawing.Point(5, 255);
+            this.uxSearchAVL.Location = new System.Drawing.Point(5, 206);
             this.uxSearchAVL.Name = "uxSearchAVL";
             this.uxSearchAVL.Size = new System.Drawing.Size(113, 51);
             this.uxSearchAVL.TabIndex = 14;
