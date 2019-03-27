@@ -36,6 +36,7 @@
             this.uxOutput = new System.Windows.Forms.TextBox();
             this.uxRest = new System.Windows.Forms.Button();
             this.uxAsync = new System.Windows.Forms.Button();
+            this.uxMFLApi = new System.Windows.Forms.Button();
             this.uxRawJSON.SuspendLayout();
             this.uxDebugOutput.SuspendLayout();
             this.SuspendLayout();
@@ -130,11 +131,21 @@
             this.uxAsync.UseVisualStyleBackColor = true;
             this.uxAsync.Click += new System.EventHandler(this.uxAsync_Click);
             // 
+            // uxMFLApi
+            // 
+            this.uxMFLApi.Location = new System.Drawing.Point(391, 213);
+            this.uxMFLApi.Name = "uxMFLApi";
+            this.uxMFLApi.Size = new System.Drawing.Size(122, 37);
+            this.uxMFLApi.TabIndex = 5;
+            this.uxMFLApi.Text = "MFL API";
+            this.uxMFLApi.UseVisualStyleBackColor = true;
+            // 
             // JSONParser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 464);
+            this.Controls.Add(this.uxMFLApi);
             this.Controls.Add(this.uxAsync);
             this.Controls.Add(this.uxRest);
             this.Controls.Add(this.uxDebugOutput);
@@ -162,6 +173,7 @@
         private System.Windows.Forms.TextBox uxOutput;
         private System.Windows.Forms.Button uxRest;
         private System.Windows.Forms.Button uxAsync;
+        private System.Windows.Forms.Button uxMFLApi;
     }
 }
 

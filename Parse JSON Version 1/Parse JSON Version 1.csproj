@@ -62,6 +62,7 @@
     <Compile Include="BinaryTreeNode.cs" />
     <Compile Include="Dictionary.cs" />
     <Compile Include="FootballPlayer.cs" />
+    <Compile Include="ImmutablePlayerInfo.cs" />
     <Compile Include="JSONParser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +72,12 @@
     <Compile Include="jsonPersonArray.cs" />
     <Compile Include="jsonPersonComplex.cs" />
     <Compile Include="jsonPersonSimple.cs" />
+    <Compile Include="mflAPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mflAPI.Designer.cs">
+      <DependentUpon>mflAPI.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlayerInformationAVL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="JSONParser.resx">
       <DependentUpon>JSONParser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mflAPI.resx">
+      <DependentUpon>mflAPI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

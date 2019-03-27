@@ -51,6 +51,8 @@
     <Compile Include="FootballPlayerModel.cs" />
     <Compile Include="FootballPlayerProcessor.cs" />
     <Compile Include="FootballResultModel.cs" />
+    <Compile Include="MFLPlayerModel.cs" />
+    <Compile Include="MFLPlayerProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
