@@ -28,7 +28,13 @@ namespace asyncLibrary
             /// <summary>
             /// id attribute matches with MFL player JSON.
             /// </summary>
-            public string id { get; set; }
+            public int id { get; set; }
+            /// <summary>
+            /// position attribute matches with MFL player JSON.
+            /// </summary>
+            public string Position { get; set; }
+
+            public string rosterStatus { get; set; }
         }
     }
 }

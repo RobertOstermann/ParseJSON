@@ -32,15 +32,18 @@
             this.uxResponseLabel = new System.Windows.Forms.Label();
             this.uxRequestLabel = new System.Windows.Forms.Label();
             this.uxGo = new System.Windows.Forms.Button();
-            this.uxResponse = new System.Windows.Forms.TextBox();
             this.uxAsyncURL = new System.Windows.Forms.TextBox();
             this.uxList = new System.Windows.Forms.ListBox();
+            this.uxAVLTree = new System.Windows.Forms.Button();
+            this.uxSearchAVL = new System.Windows.Forms.Button();
+            this.uxAllPlayerURL = new System.Windows.Forms.Button();
+            this.uxAllRosterURL = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uxDone
             // 
             this.uxDone.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.uxDone.Location = new System.Drawing.Point(12, 400);
+            this.uxDone.Location = new System.Drawing.Point(12, 390);
             this.uxDone.Name = "uxDone";
             this.uxDone.Size = new System.Drawing.Size(106, 38);
             this.uxDone.TabIndex = 11;
@@ -71,22 +74,9 @@
             this.uxGo.Name = "uxGo";
             this.uxGo.Size = new System.Drawing.Size(113, 51);
             this.uxGo.TabIndex = 8;
-            this.uxGo.Text = "GO!";
+            this.uxGo.Text = "async List";
             this.uxGo.UseVisualStyleBackColor = true;
             this.uxGo.Click += new System.EventHandler(this.uxGo_Click);
-            // 
-            // uxResponse
-            // 
-            this.uxResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uxResponse.Location = new System.Drawing.Point(732, 69);
-            this.uxResponse.MaxLength = 1000000000;
-            this.uxResponse.Multiline = true;
-            this.uxResponse.Name = "uxResponse";
-            this.uxResponse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.uxResponse.Size = new System.Drawing.Size(56, 369);
-            this.uxResponse.TabIndex = 7;
             // 
             // uxAsyncURL
             // 
@@ -101,20 +91,63 @@
             this.uxList.ItemHeight = 16;
             this.uxList.Location = new System.Drawing.Point(124, 72);
             this.uxList.Name = "uxList";
-            this.uxList.Size = new System.Drawing.Size(602, 356);
+            this.uxList.Size = new System.Drawing.Size(783, 356);
             this.uxList.TabIndex = 12;
+            // 
+            // uxAVLTree
+            // 
+            this.uxAVLTree.Location = new System.Drawing.Point(794, 12);
+            this.uxAVLTree.Name = "uxAVLTree";
+            this.uxAVLTree.Size = new System.Drawing.Size(113, 51);
+            this.uxAVLTree.TabIndex = 13;
+            this.uxAVLTree.Text = "async AVL Tree";
+            this.uxAVLTree.UseVisualStyleBackColor = true;
+            this.uxAVLTree.Click += new System.EventHandler(this.uxAVLTree_Click);
+            // 
+            // uxSearchAVL
+            // 
+            this.uxSearchAVL.Location = new System.Drawing.Point(5, 255);
+            this.uxSearchAVL.Name = "uxSearchAVL";
+            this.uxSearchAVL.Size = new System.Drawing.Size(113, 51);
+            this.uxSearchAVL.TabIndex = 14;
+            this.uxSearchAVL.Text = "Search AVL Tree";
+            this.uxSearchAVL.UseVisualStyleBackColor = true;
+            this.uxSearchAVL.Click += new System.EventHandler(this.uxSearchAVL_Click);
+            // 
+            // uxAllPlayerURL
+            // 
+            this.uxAllPlayerURL.Location = new System.Drawing.Point(5, 92);
+            this.uxAllPlayerURL.Name = "uxAllPlayerURL";
+            this.uxAllPlayerURL.Size = new System.Drawing.Size(113, 51);
+            this.uxAllPlayerURL.TabIndex = 15;
+            this.uxAllPlayerURL.Text = "All Player URL";
+            this.uxAllPlayerURL.UseVisualStyleBackColor = true;
+            this.uxAllPlayerURL.Click += new System.EventHandler(this.uxAllPlayerURL_Click);
+            // 
+            // uxAllRosterURL
+            // 
+            this.uxAllRosterURL.Location = new System.Drawing.Point(5, 149);
+            this.uxAllRosterURL.Name = "uxAllRosterURL";
+            this.uxAllRosterURL.Size = new System.Drawing.Size(113, 51);
+            this.uxAllRosterURL.TabIndex = 16;
+            this.uxAllRosterURL.Text = "All Roster URL";
+            this.uxAllRosterURL.UseVisualStyleBackColor = true;
+            this.uxAllRosterURL.Click += new System.EventHandler(this.uxAllRosterURL_Click);
             // 
             // asyncClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(931, 450);
+            this.Controls.Add(this.uxAllRosterURL);
+            this.Controls.Add(this.uxAllPlayerURL);
+            this.Controls.Add(this.uxSearchAVL);
+            this.Controls.Add(this.uxAVLTree);
             this.Controls.Add(this.uxList);
             this.Controls.Add(this.uxDone);
             this.Controls.Add(this.uxResponseLabel);
             this.Controls.Add(this.uxRequestLabel);
             this.Controls.Add(this.uxGo);
-            this.Controls.Add(this.uxResponse);
             this.Controls.Add(this.uxAsyncURL);
             this.Name = "asyncClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -130,8 +163,11 @@
         private System.Windows.Forms.Label uxResponseLabel;
         private System.Windows.Forms.Label uxRequestLabel;
         private System.Windows.Forms.Button uxGo;
-        private System.Windows.Forms.TextBox uxResponse;
         private System.Windows.Forms.TextBox uxAsyncURL;
         private System.Windows.Forms.ListBox uxList;
+        private System.Windows.Forms.Button uxAVLTree;
+        private System.Windows.Forms.Button uxSearchAVL;
+        private System.Windows.Forms.Button uxAllPlayerURL;
+        private System.Windows.Forms.Button uxAllRosterURL;
     }
 }
